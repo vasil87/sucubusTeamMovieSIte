@@ -1,0 +1,557 @@
+body {
+    background-color: #d9d9d9;
+    overflow: hidden;
+}
+
+nav {
+    border: 0 !important;
+}
+
+a.navbar-brand {
+    color: #fff;
+    padding: 20px;
+}
+
+a.navbar-brand {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.container-fluid {
+    background-color: #000;
+}
+
+.navbar-custom.is-fixed .navbar-brand {
+    color: #fff;
+}
+
+.navbar-custom.is-fixed .nav li a {
+    color: #fff;
+}
+
+#bs-example-navbar-collapse-1 li a:hover {
+    background-color: #0085A1;
+}
+
+.navbar-custom.is-fixed .nav li a:hover,
+.navbar-custom.is-fixed .nav li a:focus {
+    color: #fff;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #0085A1;
+}
+
+div#bs-example-navbar-collapse-1.collapse.navbar-collapse {
+    background-color: #000;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #0085A1;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: #0085A1;
+}
+
+.navbar-custom .navbar-header .navbar-toggle {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+}
+
+#main {
+    position: absolute;
+    top: 5%;
+    height: 85%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-image: url('../img/cinema.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#content-container {
+    margin-left: 3%;
+    width: 94%;
+    height: 100%;
+}
+
+#movie-container {
+    position: relative;
+    top: 50%;
+    left: 2%;
+    width: 100%;
+    height: 47%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-radius: 15px;
+}
+
+.movie-field:hover>#movie-poster {
+    display: block
+}
+
+#evaluate {
+    position: relative;
+    width: 25px;
+    height: 18px;
+    z-index: 1000000000;
+    left: 5%;
+}
+
+.likes {
+    position: absolute;
+    left: 13%;
+    bottom: 5%;
+    background-color: white
+}
+
+.likes-count {
+    color: green;
+    border-radius: 7px;
+    background-color: limegreen;
+    font-weight: 700;
+}
+
+.dislikes-count {
+    color: red;
+    background-color: indianred;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.evaluate-text {
+    position: absolute;
+    left: 1%;
+    color: black;
+    font-weight: 700;
+}
+
+.content {
+    position: relative;
+    height: 62%;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    border: 3px solid black;
+    font-weight: 700;
+}
+
+.span-field {
+    position: relative;
+    left: -2%;
+    color: black;
+    font-weight: 700;
+}
+
+.movie-field {
+    padding-left: 3%;
+    color: #black;
+    z-index: 10000;
+}
+
+.movie-poster {
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    width: 15%;
+    height: 80%;
+    z-index: 100000000000;
+    display: block;
+}
+
+#inner-site {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+find-movie-container {
+    height: 100%;
+    width: 100%;
+}
+
+#right-site {
+    position: absolute;
+    left: 50%;
+    top: 16%;
+    width: 38%;
+    height: 79%;
+}
+
+.hidden {
+    display: none;
+}
+
+#footer {
+    position: absolute;
+    top: 87%;
+    width: 100%;
+    height: 18%;
+    background-color: black;
+}
+
+#wrapper {
+    width: 99%;
+    height: 99%;
+}
+
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
+}
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
+}
+
+li {
+    list-style: none;
+}
+
+.visible {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background: #0085A1;
+    opacity: .5;
+    border-radius: 5px;
+    color: #fff;
+}
+
+#navbar {
+    border: 0;
+    height: 50px !important;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar li {
+    height: 100%;
+}
+
+#navbar li a:hover {
+    background-color: #6BAE00;
+    height: 100%;
+}
+
+.clickedNavBar {
+    background-color: #6BAE00;
+}
+
+#navbar li a {
+    height: 100%;
+    color: white;
+}
+
+#btn-login,
+#btn-signup {
+    text-decoration: none;
+}
+
+#contacts {
+    position: relative;
+    top: 6%;
+    left: 1%;
+    font-weight: bold;
+}
+
+#copyright {
+    text-align: center;
+    color: dimgrey;
+    position: relative;
+    top: 5px;
+}
+
+#socialMediaIcons ul li {
+    display: inline-block;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+#socialMediaIcons ul li :first-child {
+    position: absolute;
+    right: 25%;
+    bottom: 18%;
+}
+
+.mediaIcons:hover {
+    opacity: 0.7;
+}
+
+.customFont {
+    background-image: url("../img/background.jpg");
+    font-family: Papyrus, fantasy;
+    font-size: 200%;
+    color: yellowgreen;
+    border-radius: 10%;
+}
+
+footer li a img {
+    width: 36%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer ul li {
+    list-style: none;
+    float: left;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    color: #262626;
+    font-size: 50px;
+    z-index: 1;
+    transition: .5s ease-in-out;
+}
+
+footer ul li::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: #ccc;
+    z-index: -1;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+footer ul li:after {
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    background: rgb(255, 255, 255, .3);
+    transition: .5s ease-in-out;
+}
+
+footer ul li:hover:before {
+    left: 0;
+    transform: scale(.9);
+}
+
+footer ul li:hover:after {
+    right: 0%;
+}
+
+footer ul li:nth-child(1)::before {
+    background: #3b5999;
+}
+
+footer ul li:nth-child(2)::before {
+    background: #55acee;
+}
+
+footer ul li:nth-child(3)::before {
+    background: #cd201f;
+}
+
+footer ul li:nth-child(4)::before {
+    background: #e4405f;
+}
+
+footer ul li .fa {
+    transition: .3s ease-in-out;
+}
+
+footer ul li:hover .fa {
+    color: #fff;
+}
+
+#registerForm {
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
+}
+
+#registerPicture img {
+    margin-top: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+#registerContainer {
+    background-color: white;
+}
+
+#btn-reg {
+    margin-bottom: 500px;
+}
+
+.current-movie-img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/*
+#movie-container {
+    position: absolute;
+    top: 63%;
+    right: 0%;
+    display: inline-flex;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}*/
+
+#current-movie-title {
+    color: lime;
+    font-family: fantasy;
+    font-weight: 700;
+    font-size: 15px;
+    width: 200px;
+}
+
+#choose-by {
+    position: absolute;
+    left: 25%;
+    top: 2%;
+    font-size: 35px;
+    display: inline-block;
+}
+
+#search-by {
+    border: 3px solid darkslategray;
+    background-color: black;
+    border-radius: 15px;
+    font-family: fantasy;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#top-movies {
+    position: absolute;
+    top: 25%;
+    display: inline-flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#top {
+    position: absolute;
+    top: 14%;
+    left: 44%;
+    border: 3px solid darkslategray;
+    background-color: black;
+    border-radius: 15px;
+    font-family: fantasy;
+    font-weight: 700;
+    text-decoration: none;
+    color: mediumorchid;
+}
+
+#back-to-log {
+    margin-top: -20%;
+    margin-bottom: 10%;
+}
+
+.title {
+    color: white;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+#details-movie-container {
+    color: black;
+    background-color: white;
+    opacity: 0.9;
+}
+
+#details-movie-container {
+    overflow-y: scroll;
+}
+
+.like-container {
+    font-size: 15px;
+    display: inline-flex;
+    z-index: 100000;
+    color: white;
+}
+
+#login-row {
+    margin-top: 10%;
+}
+
+#login-container {
+    background-image: url("../img/39134046-futuristic-min.jpg");
+    margin-left: -20%;
+    margin-right: 0;
+    width: 140%;
+    height: 100%;
+    padding-right: 10%;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+#login-form {
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+
+.remember-me-container {
+    position: absolute;
+    padding-top: 2%;
+    color: gray;
+}
+
+#input-search {
+    width: 50%;
+    height: 1%;
+    margin-left: 3%;
+    border-radius: 15px;
+}
+
+.input-search-container {
+    position: absolute;
+    left: 53%;
+    padding-top: 1%;
+    display: inline-flex;
+}

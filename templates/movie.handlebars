@@ -1,0 +1,62 @@
+<div id="details-movie-container" class="container">   
+    <div class="row">
+        {{#each this}}
+        <header> 
+            <h1 id="movie-title">{{Title}}</h1>
+             <span><strong>Genre</strong>: {{Genre}}</span>
+         </header>
+            <nav>
+                <hr>
+                 <a href="#/movies"><strong>Go Back</strong></a> 
+                 <hr>
+             </nav>
+             <br>
+            <main id="main-movie-info">      
+                <article class="col-md-5">
+                    <section>
+                     <p>{{Plot}}</p>
+                     </section>
+                      <section>
+                    <ul>
+                        <li>
+                           <strong>Director</strong>: {{Director}} 
+                        </li>
+                        <li>
+                           <strong>Country</strong>: {{Country}} 
+                        </li>
+                        <li>
+                            <strong>Writer</strong>: {{Writer}}
+                        </li>
+                        <li>
+                            <strong>Actors</strong>: {{Actors}}
+                        </li>
+                    </ul>
+                 </section>
+               </article>
+               <aside  class="col-md-7" >
+                    <img src="{{Poster}}" alt="">
+                    <ul class="fa-ul" style="display:inline-block">                        
+                        <li id="like" class="clickable" data-id="{{imdbID}}"><i class="fa fa-thumbs-o-up fa-2x"  aria-hidden="true"></i>&nbsp; Likes: <strong id="number-of-likes">{{numberOfLikes}}</strong></li>
+                        <br>
+                        <li id="dislike" class="clickable" data-id="{{imdbID}}"><i class="fa fa-thumbs-o-down fa-2x"  aria-hidden="true"></i>&nbsp; Dislikes: <strong id="number-of-dislikes">{{numberOfDislikes}}</strong></li>
+                         <br>
+                        <li id="comments" class="clickable" data-id="{{imdbID}}"><i class="fa fa-comments fa-2x"  aria-hidden="true"></i>&nbsp; Comments</li>
+                    </ul>
+                    </ul>
+                </aside>          
+            </main>
+        <footer class="col-md-12">
+            <span><strong>Rating</strong>: {{imdbRating}}</span>
+            <span><strong>Released</strong>: {{Released}}</span>
+            <span><strong>Runtime</strong>: {{Runtime}}</span>
+        </footer>
+        <div id="comments-container">   
+        </div>
+        {{/each}}
+       
+    </div>
+</div>
+
+ 
+                    movie["comments"] = comments;
+                 

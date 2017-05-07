@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
+    <link href="./bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bower_components/toastr/toastr.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
+    <script src="./js/system-config.js"></script>
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./bower_components/crypto-js-lib/rollups/sha1.js"></script>
+    <script src="./bower_components/toastr/toastr.min.js"></script>
+    <script src="./bower_components/bootstrap-validator/dist/validator.min.js"></script>
+    <script src="./bower_components/handlebars/handlebars.min.js"></script>
+    <script>
+        System.import('main');
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <span class="navbar-brand customFont">Movie Site</span>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul id="navbar" class="nav nav-tabs navbar-right navbar-custom">
+                        <li>
+                            <a href="#/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#/movies">Movies</a>
+                        </li>
+                        <li>
+                            <a href="#/watch">Watch A Movie</a>
+                        </li>
+                        <li>
+                            <a id="btn-user" href="#/posts">Posts</a>
+                        </li>
+                        <li>
+                            <a href="#/users">Users</a>
+                        </li>
+                        <li>
+                            <a href="#/profile">Profile</a>
+                        </li>
+                        <li>
+                            <a id="btn-login" class=" glyphicon glyphicon-log-in" href="#/login"> Log In</a>
+                        </li>
+                        <li>
+                            <a id="btn-logout" class=" glyphicon glyphicon-log-out hidden" href="#/logout"> Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+    </header>
+    <main id="main">
+        <div id="wrapper">
+            <div id="content-container">
+                <iframe id="inner-site" src="" frameborder="0"></iframe>
+                <iframe id="right-site" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div id="footer-content">
+            <p id="copyright">2017 Movie Site | Всички права са запазени</p>
+            <div id="socialMediaIcons">
+                <ul>
+                    <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script src="./js/pagesScripts/indexPageScript.js"></script>
+</body>
+
+</html>

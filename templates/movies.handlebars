@@ -1,0 +1,37 @@
+<div id="choose-by">
+    <a id="search-by" href="#/movies">All movies</a>
+    <a id="search-by" href="#/movies/oscar">Best movies</a>
+    <a id="search-by" href="#/movies/upcoming">Get upcoming</a>
+    <a id="search-by" href="#/movies/genre">Search by genre</a>
+    <a id="search-by" href="#/movies/actor">Search by actor</a>
+    <div class="input-search-container">
+        <input id="input-search" class="genre" type="text">
+        <input id="input-search" class="actor" type="text">
+    </div>
+</div>
+
+<h1 id="top">Top movies</h1>
+<div id="top-movies" class="col-md-offset-3">
+</div>
+
+<div id="movie-container">
+    {{#this}}
+     {{#if Title}}
+
+    <div class="content">
+        <p class="movie-field" >
+            <div class="movie-poster-container clickable" data-imdbid="{{imdbID}}">
+                <img class="movie-poster"  src="{{Poster}}" alt="">  
+                <div class="data hidden" style="dispay:none">{{data}}</div>
+            </div>
+        </p>
+        <p class="movie-field"><span class="span-field">Title:</span>{{Title}}</p>
+        <p class="movie-field"><span class="span-field">IMDB:</span>{{imdbRating}}</p>
+        <p class="movie-field"><span class="span-field">Genre:</span>{{Genre}}</p>
+        <p class="movie-field"><span class="span-field">Actors:</span>{{Actors}}</p>
+        <p class="movie-field"><span class="span-field">Country:</span>{{Country}}</p>
+        <p class="movie-field"><span class="span-field">Votes:</span>{{imdbVotes}}</p>
+    </div>
+    {{/if}} 
+    {{/this}}
+</div>

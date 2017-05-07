@@ -1,0 +1,19 @@
+  {{#this}}
+     {{#if Title}}
+
+    <div class="content">
+        <p class="movie-field" >
+            <div class="movie-poster-container clickable" data-imdbid="{{imdbID}}">
+                <img class="movie-poster"  src="{{Poster}}" alt="">
+                <div class="data hidden" style="dispay:none">{{data}}</div>
+            </div>
+        </p>
+        <p class="movie-field"><span class="span-field">Title:</span>{{Title}}</p>
+        <p class="movie-field"><span class="span-field">IMDB:</span>{{imdbRating}}</p>
+        <p class="movie-field"><span class="span-field">Genre:</span>{{Genre}}</p>
+        <p class="movie-field"><span class="span-field">Actors:</span>{{Actors}}</p>
+        <p class="movie-field"><span class="span-field">Country:</span>{{Country}}</p>
+        <p class="movie-field"><span class="span-field">Votes:</span>{{imdbVotes}}</p>
+    </div>
+    {{/if}} 
+    {{/this}}

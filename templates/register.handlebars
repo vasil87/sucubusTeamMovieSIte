@@ -1,0 +1,166 @@
+<div id="registerContainer" class="container">
+    <div class='row align-items-center'>
+        <div class='col-md-6'>
+            <form id="registerForm" class="form-horizontal" role="form" data-toggle="validator">
+                <a id="back-to-log" href="#/login" class="btn btn-primary col-md-offset-3">Back to Log</a>
+                <h2>Registration</h2>
+                <div class="form-group">
+                    <label for="firstName" class="col-sm-3 control-label">First Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus required>
+                        <!--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="familyName" class="col-sm-3 control-label">Family Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="familyName" placeholder="Family Name" class="form-control" autofocus required>
+                        <!--<span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" placeholder="Username" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" placeholder="Email" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" data-minlength="6" id="inputPassword" placeholder="Password" class="form-control" required/>
+                        <div class="help-block with-errors">Minimum 6 chars</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Confirm password</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="inputPasswordConfirm" placeholder="Confirm-Password" class="form-control" data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" required />
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                           <input name= "gender" type="radio" id="femaleRadio" value="false">
+                           Female
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input name= "gender" type="radio" id="maleRadio" value="true">
+                             Male
+                        </label>
+                    </div>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                    <input id="terms" type="checkbox" required>I accept <a href="#" data-toggle="modal" data-target="#termsModal">terms</a></input>
+                </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" data-disable="true" id="btn-reg" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="registerPicture" class='col-md-6'>
+            <img src="../img/movie-popcorn.jpg" alt="">
+        </div>
+    </div>
+</div>
+<script src="../js/pagesScripts/registration.js"></script>
+<!-- /form -->
+<!-- Trigger the modal with a button -->
+<!-- Modal -->
+<div id="termsModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Terms and Conditions</h4>
+            </div>
+            <div class="modal-body">
+
+                <h1>Lorem Ipsum</h1>
+                <h4>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."</h4>
+                <h5>"???? ?????, ????? ????? ??????? ???? ?? ???? ??, ????? ? ? ? ?????, ???? ?????? ? ?????..."</h5>
+
+
+                <hr />
+
+                <div id="Content">
+                    <div class="boxed">
+                        <!-- 
+
+
+
+
+ -->
+                        <div id="lipsum">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mollis purus purus. Pellentesque elementum libero ut nibh commodo, a posuere nisl imperdiet. Donec aliquet magna sed ullamcorper facilisis. Morbi condimentum nulla ac felis commodo, sed hendrerit
+                                ex aliquet. Sed suscipit dignissim justo, sit amet tincidunt diam imperdiet at. Nam ut blandit nulla. Integer venenatis eu dui vitae rhoncus. Sed malesuada lorem sapien. Nam vestibulum, justo finibus fringilla commodo,
+                                arcu justo blandit ligula, eu sodales tortor nunc lobortis ligula. Aenean egestas venenatis urna, in lobortis risus commodo at. Duis finibus turpis quam, id vulputate est auctor ac. Vivamus quis erat sem. Nunc vulputate
+                                orci leo, id tempus risus ullamcorper nec.
+                            </p>
+                            <p>
+                                Donec tortor tellus, iaculis nec odio sed, viverra efficitur ante. Fusce leo justo, maximus dapibus nisl vitae, vehicula aliquet eros. Praesent sem libero, ullamcorper at pulvinar sit amet, pellentesque ac enim. Duis scelerisque cursus scelerisque. Phasellus
+                                quis ornare nibh. Sed ac vehicula lorem. Nulla quis massa quis purus blandit vestibulum. Proin dictum enim dolor, non facilisis libero euismod in. Proin id mi eu tortor venenatis finibus at quis ante. Nulla fringilla, sapien
+                                at egestas mollis, neque augue tincidunt tortor, efficitur bibendum mauris lorem quis nisi. Praesent elementum nisi est, eu lobortis elit porttitor et. Aliquam finibus sagittis dui at pretium. Phasellus sit amet lorem nisi.
+                                Aliquam aliquam finibus metus, et commodo lacus luctus nec. Duis facilisis euismod condimentum.
+                            </p>
+                            <p>
+                                Nulla sit amet enim lacus. Donec tincidunt lorem at felis aliquet cursus. Praesent eget pulvinar arcu, nec mollis erat. Cras eu elit vel risus condimentum feugiat ut ac elit. Quisque vel vestibulum risus. Mauris posuere tortor eu mauris finibus varius.
+                                Aenean hendrerit diam mi, eget tristique nibh egestas nec.
+                            </p>
+                            <p>
+                                Duis nisl quam, vulputate vitae mi sed, tincidunt egestas ipsum. Maecenas ut odio libero. Aliquam pharetra magna mi, eu eleifend diam accumsan venenatis. Donec eu pellentesque ipsum. Nunc nibh elit, scelerisque quis suscipit at, ullamcorper rhoncus nisi.
+                                Integer facilisis neque sed nisi euismod, a sodales erat maximus. Quisque porttitor mauris ut nisi ullamcorper tempus. Mauris dictum, ipsum tristique pulvinar placerat, ante nulla auctor dui, eu venenatis dui arcu a diam.
+                            </p>
+                            <p>
+                                Aliquam et tellus suscipit lorem vulputate finibus eu vitae tortor. Suspendisse dignissim at nibh vitae egestas. Aliquam eleifend odio tellus, a lobortis massa auctor a. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+                                himenaeos. Vestibulum bibendum pretium varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean fermentum nec nunc eget sagittis. Integer lobortis ornare dolor vitae malesuada.
+                                Ut ut consequat libero. Nullam a odio risus. Aliquam viverra velit in sapien vehicula, nec dapibus leo porta. Nam libero leo, ornare nec mollis vitae, fringilla nec ante. Curabitur sem justo, gravida congue lobortis non,
+                                pharetra ut purus. Morbi id pharetra nibh, ac ornare libero. Aenean facilisis erat sed purus lacinia tristique.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div id="bannerL">
+                        <div id="div-gpt-ad-1474537762122-2">
+
+                        </div>
+                    </div>
+                    <div id="bannerR">
+                        <div id="div-gpt-ad-1474537762122-3">
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

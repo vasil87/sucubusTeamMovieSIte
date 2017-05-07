@@ -1,0 +1,8 @@
+{{#each this}}
+<li class="current-movie clickable  topMovie" data-imdbid="{{imdbID}}">
+      <img class="current-movie-img" src='{{Poster}}' alt="">
+      <p class='title'>{{Title}} </p>
+      <p class='title'>{{imdbRating}}</p> 
+      <div class="data hidden" style="dispay:none">{{data}}</div>
+</li>
+{{/each}}
