@@ -1,0 +1,23 @@
+<div class="panel-group" id="users-container">
+  {{#each this}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{UsersId}}">
+        {{UserName}}</a>
+      </h4>
+    </div>
+    <div id="collapse{{UsersId}}" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <p>Email: {{Email}}</p>
+         <p>FirstName: {{FirstName}}</p>
+          <p>LastName: {{LastName}}</p>
+          <p>UserName: {{UserName}} </p>
+          {{#if City}}
+           <p>City: {{City}} </p>
+          {{/if}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

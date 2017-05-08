@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,11 @@
     "jquery": "^3.1.0",
     "navigo": "^2.3.1",
     "systemjs": "^0.19.38",
-    "systemjs-plugin-babel": "0.0.15"
+    "systemjs-plugin-babel": "0.0.15",
+       "body-parser": "^1.13.3",
+        "express": "^4.13.3",
+        "lodash": "^3.10.1",
+        "lowdb": "^0.10.2",
+        "underscore-db": "^0.9.0"
   }
 }
