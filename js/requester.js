@@ -1,5 +1,5 @@
 // const URL_FOR_WEB_API = 'http://localhost:51443/';
-const URL_FOR_WEB_API = 'http://sucubus.apphb.com/';
+const URL_FOR_WEB_API = 'https://sucubus.apphb.com/';
 
 function request(url, type, body) {
     const promise = new Promise((resolve, reject) => $.ajax({
