@@ -2,6 +2,7 @@ import { templatesLoader } from 'templatesLoader';
 import { DataOMDBController } from "dataOMDBManager";
 import * as constantManager from 'constants';
 import * as data from 'data';
+import * as commentsControler from 'commentsControler';
 
 const OMDBController = new DataOMDBController();
 const $contentDiv = $('#content-container');
@@ -87,23 +88,20 @@ export function seeMovie(param) {
     data.getMovie(movie.imdbID)
         .then(function(res) {
             var movieData = res;
-            data.getMoviesComments(movieData.ImdbID)
-                .then(function(comments) {
-                    //only needs moviedata for comments like and dislikes
-                    movie["comments"] = comments;
-                    movie["numberOfLikes"] = movieData.LikesNumber;
-                    movie["numberOfDislikes"] = movieData.DislikesNumber;
-                    // console.log(comments);
-                    // console.log(movieData);
-                    console.log(movie);
-                    templatesLoader.get('movie')
-                        .then(function(template) {
-                            var movies = [];
-                            movies.push(movie);
-                            $contentDiv.html(template(movies));
+            //only needs moviedata for comments like and dislikes
+            // movie["comments"] = comments;
+            movie["numberOfLikes"] = movieData.LikesNumber;
+            movie["numberOfDislikes"] = movieData.DislikesNumber;
+            // console.log(comments);
+            // console.log(movieData);
+            console.log(movie);
+            templatesLoader.get('movie')
+                .then(function(template) {
+                    var movies = [];
+                    movies.push(movie);
+                    $contentDiv.html(template(movies));
 
-                            addMovieClickLogic();
-                        });
+                    addMovieClickLogic();
                 });
         });
 }
@@ -188,32 +186,15 @@ var addMovieClickLogic = function() {
 
     /*Comments logic*/
     $("#comments").on("click", function() {
+        if ($("#comment-form").length) {
+            $("#comments-container").toggle();
+        } else {
+            commentsControler.addComments(this);
+        }
 
     });
 
 };
-
-// function getAllMovies() {
-//     const resultArray = [];
-
-//     keyWords.forEach(word => {
-//         let currentRequestURL = `http://www.omdbapi.com/?t=${word}&y=2017&type=movie`;
-//         let currentMovies = OMDBController.getNewestMovies(currentRequestURL);
-//         resultArray.push(currentMovies);
-//     });
-
-//     //filter for n/a props
-//     return resultArray.map(function(x) {
-//         for (var i in x) {
-//             if (x[i] === "N/A") {
-//                 delete x[i];
-//             }
-//         }
-//         x["data"] = JSON.stringify(x);
-//         return x;
-//     });
-// }
-
 
 var addMovieImgClick = function(movies) {
     getTopLikedOrDislikedMoviesSorted({ numberOfMovies: 5, liked: true })
@@ -260,3 +241,24 @@ var addMovieImgClick = function(movies) {
                 });
         });
 };
+
+// function getAllMovies() {
+//     const resultArray = [];
+
+//     keyWords.forEach(word => {
+//         let currentRequestURL = `http://www.omdbapi.com/?t=${word}&y=2017&type=movie`;
+//         let currentMovies = OMDBController.getNewestMovies(currentRequestURL);
+//         resultArray.push(currentMovies);
+//     });
+
+//     //filter for n/a props
+//     return resultArray.map(function(x) {
+//         for (var i in x) {
+//             if (x[i] === "N/A") {
+//                 delete x[i];
+//             }
+//         }
+//         x["data"] = JSON.stringify(x);
+//         return x;
+//     });
+// }

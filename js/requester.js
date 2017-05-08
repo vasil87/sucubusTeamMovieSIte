@@ -1,5 +1,5 @@
-// const URL_FOR_WEB_API = 'http://localhost:51443/';
-const URL_FOR_WEB_API = 'http://sucubus.apphb.com/';
+const URL_FOR_WEB_API = 'http://localhost:51443/';
+// const URL_FOR_WEB_API = 'http://sucubus.apphb.com/';
 
 function request(url, type, body) {
     const promise = new Promise((resolve, reject) => $.ajax({
@@ -73,6 +73,6 @@ export function postSqlStringify(url, headers, body, contentType) {
     return requestSql(URL_FOR_WEB_API + url, 'POST', headers, JSON.stringify(body), contentType);
 }
 
-export function putSql(url, headers, body) {
-    return requestSql(URL_FOR_WEB_API + url, 'PUT', headers, JSON.stringify(body));
+export function putSql(url, headers, body, contentType) {
+    return requestSql(URL_FOR_WEB_API + url, 'PUT', headers, JSON.stringify(body), contentType);
 }

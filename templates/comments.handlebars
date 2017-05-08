@@ -1,9 +1,25 @@
-<ul class="list-group">
-  <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
-  <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
-  <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
-  <li class="list-group-item list-group-item-danger">Vestibulum at eros</li>
+<div>
+  <form id="comment-form" class="form-horizontal col-md-12" role="form" data-toggle="validator">
+   <div class="form-group col-md-11">
+     <label for="Comment" class="col-md-3 control-label">Comment</label>
+     <div class="col-md-9">
+         <input type="text" id="comment-text" placeholder="Write comment..." class="form-control" autofocus required>
+      </div>
+   </div>
+    <div class="form-group col-md-1">
+        <div class="col-md-12">
+           <button type="submit" data-disable="true" id="btn-commit-comment" class="btn btn-success">Add</button>
+        </div>
+     </div>
+  </form>
+<ul id="ul-comments" class="list-group col-md-9">
+  {{#each this}}
+  <li class="list-group-item list-group-item-success comment-item" data-id="{{Id}}">
+    {{Comment}}
+  {{#if owner}}
+   <button type="button" data-id="{{Id}}" class="close comment-close" data-dismiss="modal">&times;</button>
+  {{/if}}
+  </li>
+  {{/each}}
 </ul>
-
-//write
-//i delete
+</div>

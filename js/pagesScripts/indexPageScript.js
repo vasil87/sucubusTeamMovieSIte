@@ -1,8 +1,10 @@
 $(function() {
     const LOCAL_STORAGE_USERNAME_KEY = 'signed-in-user-username';
     const LOCAL_STORAGE_AUTHKEY_KEY = 'signed-in-user-auth-key';
-    if (!!localStorage.getItem(LOCAL_STORAGE_USERNAME_KEY) &&
-        !!localStorage.getItem(LOCAL_STORAGE_AUTHKEY_KEY)) {
+    if ((!!localStorage.getItem(LOCAL_STORAGE_USERNAME_KEY) &&
+            !!localStorage.getItem(LOCAL_STORAGE_AUTHKEY_KEY)) ||
+        (!!sessionStorage.getItem(LOCAL_STORAGE_USERNAME_KEY) &&
+            !!sessionStorage.getItem(LOCAL_STORAGE_AUTHKEY_KEY))) {
         $("#btn-login").addClass("hidden");
         $("#btn-logout").removeClass("hidden");
     } else {

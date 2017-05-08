@@ -18,7 +18,6 @@ var transform = function(obj) {
 /* Users */
 
 export function register(user) {
-
     var reqUser = {
         username: user.username,
         password: user.password,
@@ -38,6 +37,7 @@ export function addMoviesUser(user) {
         email: user.email,
         firstname: user.firstname,
         lastname: user.lastname,
+        city: user.city,
         ismale: user.ismale
     };
     var contentType = 'application/json';
@@ -105,13 +105,36 @@ export function getLogedUser() {
     return localStorage.getItem(LOCAL_STORAGE_USERNAME_KEY) || sessionStorage.getItem(LOCAL_STORAGE_USERNAME_KEY);
 }
 
+export function getUserInfo(id) {
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
 
-// export function usersGet() {
-//     return jsonRequester.get('api/users')
-//         .then(function(res) {
-//             return res.result;
-//         });
-// }
+    return requester.getSql('api/users/Get/' + id, header);
+}
+
+export function updataMovieUser(user) {
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
+    var content = "application/json";
+
+    return requester.postSqlStringify('api/users/UpdateUserData', header, user, content);
+}
+
+export function changeUserPassword(password) {
+
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
+    var content = "application/json";
+
+    return requester.postSqlStringify('api/Account/ChangePassword', header, password, content);
+}
+
+export function getAllUsers() {
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
+
+    return requester.getSql('api/users/Get', header);
+}
 
 /* Movies */
 export function getTopLikedOrDislikedMovies({ numberOfMovies, liked }) {
@@ -158,10 +181,30 @@ export function likeAMovieOrDislikeAMovie({ userId, imdbId, like }) {
 
 
 /* Comments */
-export function getMoviesComments(imdbId) {
+export function getAllCommentsForAMovie(imdbId) {
     var header = setAuthHeader();
     header["contentType"] = 'application/json';
 
     return requester.getSql('api/comments/GetAllCommentsForAMovie/' + imdbId, header);
+}
 
+export function addAComment({ UserId, ImdbId, Text }) {
+
+    var model = { UserId, ImdbId, Text };
+
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
+    var content = "application/json";
+
+    return requester.postSqlStringify("api/comments/CreateComment", header, model, content);
+}
+
+export function deleteComment(commentId) {
+
+    var header = setAuthHeader();
+    header["contentType"] = 'application/json';
+    var content = "application/json";
+    var body = { "CommentId": commentId };
+
+    return requester.putSql("api/comments/DeleteComment", header, body, content);
 }

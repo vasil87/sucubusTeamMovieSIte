@@ -24,7 +24,8 @@
     "chai": "^3.5.0",
     "crypto-js-lib": "^3.1.2",
     "bootstrap-validator": "https://github.com/1000hz/bootstrap-validator.git#^0.11.9",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery-ui": "^1.12.1"
   },
   "resolutions": {
     "jquery": "1.9.1 - 3"

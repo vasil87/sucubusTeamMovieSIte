@@ -4,14 +4,8 @@ import * as userControler from 'userControler';
 import { openNearestCinema } from 'watchControler';
 import * as mController from 'movieControler';
 import { checkIfThereIsLogedInUser } from 'authenticator';
-// import * as homeController from 'homeController';
-// import * as myCookieController from 'myCookieController';
-// import * as userController from 'userController';
 
-// istances
 let router = new MyRouter();
-// let controller = new MainController(data);
-
 
 router.on('register', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: true, callback: userControler.register, params }); })
     .on('watch', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: openNearestCinema, params }); })
@@ -22,7 +16,9 @@ router.on('register', function(params) { checkIfThereIsLogedInUser({ allowAnonim
     .on('movie/:moviedata', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.seeMovie, params }); })
     .on('movies/upcoming', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getUpcomingMovies, params }); })
     .on('movies/actor', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getByActor, params }); })
-    .on('movies/genre', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getByGenre, params }); });
+    .on('movies/genre', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getByGenre, params }); })
+    .on('profile', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: userControler.userProfile, params }); })
+    .on('users', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: userControler.userProfile, params }); });
 
 $(window).on('load', () => router.navigate());
 $(window).on('hashchange', () => router.navigate());
