@@ -27,7 +27,8 @@ export function addComments(target) {
                                         console.log(err);
                                     });
                             });
-                            $("#btn-commit-comment").on("click", function() {
+                            $("#btn-commit-comment").on("click", function(e) {
+                                e.preventDefault();
                                 var input = $("#comment-text").val().trim();
                                 if (input) {
                                     //data get logged user is not a promise;

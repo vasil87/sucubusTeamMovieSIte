@@ -174,7 +174,6 @@ export function userProfile() {
         });
 }
 
-//todo remake
 export function getAll() {
     data.getAllUsers()
         .then(function(users) {

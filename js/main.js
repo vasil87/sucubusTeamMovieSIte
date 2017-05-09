@@ -20,7 +20,7 @@ router
     .on('movies/actor', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getByActor, params }); })
     .on('movies/genre', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: mController.getByGenre, params }); })
     .on('profile', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: userControler.userProfile, params }); })
-    .on('users', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: userControler.userProfile, params }); })
+    .on('users', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: userControler.getAll, params }); })
     .on('home', function(params) { checkIfThereIsLogedInUser({ allowAnonimous: false, callback: homeControler.loadHome, params }); });
 
 $(window).on('load', () => router.navigate());
