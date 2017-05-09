@@ -25,7 +25,7 @@ class DataOMDBController {
         const resultArray = [];
 
         this.keyWords.forEach(word => {
-            let currentRequestURL = `http://www.omdbapi.com/?t=${word}&y=2017&type=movie`;
+            let currentRequestURL = `https://www.omdbapi.com/?t=${word}&y=2017&type=movie`;
             let currentMovies = requester.getM(currentRequestURL);
             if (currentMovies.Poster != "N/A" && currentMovies.Poster != "") {
                 resultArray.push(currentMovies);
@@ -40,7 +40,7 @@ class DataOMDBController {
         const resultArray = [];
 
         this.keyWords.forEach(keyWord => {
-            var currentRequestURL = `http://www.omdbapi.com/?t=${keyWord}&type=movie`;
+            var currentRequestURL = `https://www.omdbapi.com/?t=${keyWord}&type=movie`;
             let currentMovies = requester.getM(currentRequestURL);
 
             if (currentMovies.Awards && currentMovies.Awards != "N/A" && currentMovies.Poster != "N/A" && currentMovies.Poster != "") {
@@ -58,7 +58,7 @@ class DataOMDBController {
         const resultArray = [];
 
         this.keyWords.forEach(word => {
-            let currentRequestURL = `http://www.omdbapi.com/?t=${word}&y=2018&type=movie`;
+            let currentRequestURL = `https://www.omdbapi.com/?t=${word}&y=2018&type=movie`;
             let currentMovies = requester.getM(currentRequestURL);
             if (currentMovies.Poster != "N/A" && currentMovies.Poster != "") {
                 resultArray.push(currentMovies);
@@ -72,7 +72,7 @@ class DataOMDBController {
         const resultArray = [];
 
         this.keyWords.forEach(word => {
-            let currentRequestURL = `http://www.omdbapi.com/?t=${word}&type=movie`;
+            let currentRequestURL = `https://www.omdbapi.com/?t=${word}&type=movie`;
             let currentMovies = requester.getM(currentRequestURL);
             if (currentMovies.Poster != "N/A" && currentMovies.Poster != "") {
                 if (currentMovies.Actors && currentMovies.Actors.toLowerCase().includes(actorName.toLowerCase())) {
@@ -88,7 +88,7 @@ class DataOMDBController {
         const resultArray = [];
 
         this.keyWords.forEach(word => {
-            let currentRequestURL = `http://www.omdbapi.com/?t=${word}&type=movie`;
+            let currentRequestURL = `https://www.omdbapi.com/?t=${word}&type=movie`;
             let currentMovies = requester.getM(currentRequestURL);
             if (currentMovies.Poster != "N/A" && currentMovies.Poster != "") {
                 if (currentMovies.Genre && currentMovies.Genre.toLowerCase().includes(genre.toLowerCase())) {
@@ -106,7 +106,7 @@ class DataOMDBController {
         let resultMovies = [];
 
         this.keyWordsToSearch.forEach(keyWord => {
-            var currentRequestURL = `http://www.omdbapi.com/?t=${keyWord}&y=${previousYear}}&type=movie`;
+            var currentRequestURL = `https://www.omdbapi.com/?t=${keyWord}&y=${previousYear}}&type=movie`;
 
             requester.get(currentRequestURL)
                 .then(result => {
@@ -123,7 +123,7 @@ class DataOMDBController {
         let resultMovies = [];
 
         this.keyWordsToSearch.forEach(keyWord => {
-            var currentRequestURL = `http://www.omdbapi.com/?t=${keyWord}&type=movie`;
+            var currentRequestURL = `https://www.omdbapi.com/?t=${keyWord}&type=movie`;
 
             requester.get(currentRequestURL)
                 .then(result => {
@@ -139,7 +139,7 @@ class DataOMDBController {
         let resultMovies = [];
 
         this.keyWordsToSearch.forEach(keyWord => {
-            var currentRequestURL = `http://www.omdbapi.com/?t=${keyWord}&type=movie`;
+            var currentRequestURL = `https://www.omdbapi.com/?t=${keyWord}&type=movie`;
 
             requester.get(currentRequestURL)
                 .then(result => {
