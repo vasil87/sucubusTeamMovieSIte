@@ -46,8 +46,8 @@ function requestM(url) {
 }
 
 export function getM(url) {
-    let resultMovie = requestM(url);
-    return resultMovie;
+    let result = requestM(url);
+    return result;
 }
 
 export function get(url) {

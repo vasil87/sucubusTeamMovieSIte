@@ -1,15 +1,64 @@
-<!-- Buttons-->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <a href="#categories" class="btn btn-info btn-categories">Categories</a>
-        </div>
-        <div class="col-md-12">
-            <a href="#add-post" class="btn btn-info btn-add-post">Add  Post</a>
-        </div>
-        <div class="col-md-12">
-            <a href="#user-posts" class="btn btn-info btn-my-post">My Posts</a>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+    {{!--<img class="weather" src="https://www.theweather.com/wimages/foto69785edea0ecd42e2c53094db559f8d9.png">--}}
+<div id="cont_81356ca356f62cf82af58d8c3624204e">
+<script type="text/javascript" async src="https://www.yourweather.co.uk/wid_loader/81356ca356f62cf82af58d8c3624204e"></script>
 </div>
+    
+<iframe class="clock" src="https://freesecure.timeanddate.com/clock/i5pknfgg/n238/szw80/szh80/hoc000/hbw0/hfc000/cf100/hgr0/fav0/fiv0/mqcfff/mql15/mqw4/mqd94/mhcfff/mhl15/mhw4/mhd94/mmv0/hhcbbb/hmcddd/hsceee" frameborder="0" width="80" height="80"></iframe>
+
+
+<div id ="main-container-mtv">
+{{#articles}}
+<div id="news-container-mtv">
+    <h1 id="title-mtv">{{title}}</h1>
+    <p id="description-mtv">{{description}}</p>
+    <p><a id="link-to-article-mtv" href="{{url}}">Click here to read full article</a></p>
+    <p><img id="img-to-mtv" src="{{urlToImage}}" alt=""></p>
 </div>
+{{/articles}}
+</div>
+
+    
+<!--<div class="imageSlider" style="max-width:34%">
+<h2 class="titleImageSlider">Best movies of all time</h2>
+    
+  <img class="mySlides" src="../img/top 10 movies of all time/first_TheGodfather.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/second_TheShawshankRedemption.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/third_SchindlersList.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/fourth_RagingBull.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/fifth_Casablanca.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/sixth_CitizenKane.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/seventh_GoneWithTheWind.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/eighth_TheWizardOfOz.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/ninth_OneFlewOverTheCuckoosNest.jpg" style="width:100%">
+  <img class="mySlides" src="../img/top 10 movies of all time/tenth_LawrenceOfArabia.jpg" style="width:100%">
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>-->
+
+</body>
+</html>

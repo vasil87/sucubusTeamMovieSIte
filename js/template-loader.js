@@ -1,8 +1,3 @@
-/*jshint esversion: 6 */
-
-// import * as Handlebars from 'handlebars';
-
-
 class TemplatesLoader {
 
     constructor() {

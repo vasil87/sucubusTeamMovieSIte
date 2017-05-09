@@ -19,6 +19,7 @@ SystemJS.config({
         'authenticator': 'js/common/authenticator.js',
         'constants': 'js/common/constants.js',
         'commentsControler': 'js/controlers/commentsControler.js',
+        'homeControler': 'js/controlers/homeControler.js',
         //    'homeController': 'js/controllers/home.js',
         //    'myCookieController': 'js/controllers/myCookie.js',
         //    'userController': 'js/controllers/user.js',

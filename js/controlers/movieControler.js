@@ -1,6 +1,6 @@
 import { templatesLoader } from 'templatesLoader';
 import { DataOMDBController } from "dataOMDBManager";
-import * as constantManager from 'constants';
+import { constantManager } from 'constants';
 import * as data from 'data';
 import * as commentsControler from 'commentsControler';
 
